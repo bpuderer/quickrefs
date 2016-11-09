@@ -12,6 +12,10 @@ ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
 scp -rp srcfile destfile|recursively copy entire directory|scp -rp somedir user@dest:/path
 script filename|typescript of terminal session with timestamp in filename. exit when done|script somefile_\`date +%Y%m%dT%H%M%S\`.log
+screen|create screen session. ^a then d to detach screen from terminal|screen
+screen -S sessionname|create and name screen session. ^a then d to detach screen from terminal|screen -S upgrade
+screen -r sessionname|resume detached screen session|screen -r upgrade
+screen -list|print screen sessions|screen -list
 sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text file|sed 's/from/to/g' somefile
 sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g somefile
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
