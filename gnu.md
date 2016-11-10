@@ -28,8 +28,8 @@ tar xvf tarfile|extract tar file|tar xvf file.tar
 tar xzvf gziptarfile|extract gzip'd tar file|tar xzvf file.tar.gz
 tee filename|read from stdin and write to stdout and file|tail -F server.log &#124; tee test123.log
 touch filename|update access and mod time to current time. empty file created if filename does not exist|touch temp.txt
-tr -d 'charstodelete'|delete chars from stdin|tr -d '\r' < infile > outfile
-uname -a|print sytem info|uname -a
+tr -d 'charstodelete'|delete characters from stdin|tr -d '\r' < infile > outfile
+uname -a|print system info|uname -a
 watch -n numseconds command|continually run command|watch -n 5 ls -l
 wc -l|print number of lines|grep -o IOError server.log &#124; wc -l
 while true; do command; sleep numseconds; done|continually run command|while true; do ls -l; sleep 5; done
