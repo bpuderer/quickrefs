@@ -21,10 +21,11 @@ sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
 sudo -u username command|run command as another user|sudo -u foo ls -l
 tail -F filename|output appended data to file and retry if inaccessible|tail -F server.log
+tar cvf tarfile filename|collect files into one archive file|tar cvf docs.tar foo.ods bar.kdbx
+tar czvf gziptarfile filename|collect files into one archive file and compress with gzip|tar czvf docs.tar.gz ~/Documents
+tar tvf tarfile|list contents of archive file|tar tvf docs.tar.gz
 tar xvf tarfile|extract tar file|tar xvf file.tar
 tar xzvf gziptarfile|extract gzip'd tar file|tar xzvf file.tar.gz
-tar cvf tarfile|create tar file|tar cvf file.tar somedir
-tar czvf gziptarfile|create gzip'd tar file|tar czvf file.tar.gz somedir
 tee filename|read from stdin and write to stdout and file|tail -F server.log &#124; tee test123.log
 touch filename|update access and mod time to current time. empty file created if filename does not exist|touch temp.txt
 tr -d 'charstodelete'|delete chars from stdin|tr -d '\r' < infile > outfile
