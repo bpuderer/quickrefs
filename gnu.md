@@ -1,6 +1,7 @@
 Command|Description|Example
 ---|---|---
 alias name='command'|create command shortcut|alias ..='cd ..'
+at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
 grep -ir pattern file|recursive case-insensitive search for pattern|grep -ir "color_scheme" ~/.config
