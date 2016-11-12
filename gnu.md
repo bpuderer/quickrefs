@@ -2,6 +2,7 @@ Command|Description|Example
 ---|---|---
 alias name='command'|create command shortcut|alias ..='cd ..'
 at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
+export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
 grep -ir pattern file|recursive case-insensitive search for pattern|grep -ir "color_scheme" ~/.config
@@ -9,6 +10,7 @@ ln -s target linkname|create symlink|ln -s server-1.0.jar server.jar
 md5sum filename|print MD5 checksum|md5sum geany-1.28.tar.gz
 mkdir -p path|created nested directory including parent dirs as needed|mkdir -p ~/games/hacx
 netstat -an|print networking info with numeric addresses|netstat -an
+printenv|print all or specified environment variables|printenv PATH JAVA_HOME
 ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
 scp -rp srcfile destfile|recursively copy entire directory|scp -rp somedir user@dest:/path
