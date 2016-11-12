@@ -34,3 +34,12 @@ watch -n numseconds command|continually run command|watch -n 5 ls -l
 wc -l|print number of lines|grep -o IOError server.log &#124; wc -l
 while true; do command; sleep numseconds; done|continually run command|while true; do ls -l; sleep 5; done
 wget url|download file from ftp/http/https|wget http://download.geany.org/geany-1.28.tar.gz
+
+Cron|Description
+---|---
+*/5 * * * *|every 5 minutes
+0,30 * * * *|twice an hour
+0 */5 * * *|every 5 hours
+0 0 * * *|once a day at midnight
+
+min(0-59) hour(0-23) day of month(1-31) month(1-12) day of week(0-6)(sun-sat)
