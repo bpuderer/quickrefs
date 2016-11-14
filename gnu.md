@@ -2,6 +2,7 @@ Command|Description|Example
 ---|---|---
 alias name='command'|create command shortcut|alias ..='cd ..'
 at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
+cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
@@ -13,7 +14,7 @@ netstat -an|print networking info with numeric addresses|netstat -an
 printenv|print all or specified environment variables|printenv PATH JAVA_HOME
 ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
-scp -rp srcfile destfile|recursively copy entire directory|scp -rp somedir user@dest:/path
+scp -rp srcfile destfile|recursively copy directory|scp -rp somedir user@dest:/path
 script filename|typescript of terminal session with timestamp in filename. exit when done|script somefile_\`date +%Y%m%dT%H%M%S\`.log
 screen|create screen session. ^a then d to detach screen from terminal|screen
 screen -S sessionname|create and name screen session. ^a then d to detach screen from terminal|screen -S upgrade

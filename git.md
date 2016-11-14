@@ -46,9 +46,11 @@ git push --delete origin tagname|delete remote tag
 git config --global alias.co checkout|create alias
 git branch branchname|create branch
 git checkout branchname|switch working tree to specified branch
+git checkout -b branchname|create branch and switch to it
 git merge branchname|merge specified branch into current branch and record as a commit
 git branch -a|list remote and local branches
 git branch -d branchname|delete branch
+git rebase branchname|rebase current branch with specified branch
 
 
 [Reference Manual](https://git-scm.com/docs)
