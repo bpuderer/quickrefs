@@ -55,4 +55,4 @@ git rebase branchname|rebase current branch with specified branch
 
 [Reference Manual](https://git-scm.com/docs)
 
-[Pro Git 2e](https://git-scm.com/book/en/v2]) on [github](https://github.com/progit/progit2)
+[Pro Git 2e](https://git-scm.com/book/en/v2) on [github](https://github.com/progit/progit2)
