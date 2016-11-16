@@ -13,9 +13,10 @@ git add '*.txt'|recursively stage files using wildcard
 git add .|stage added, modified, deleted files
 .gitignore|file containing patterns of files for git to ignore.  [templates](https://github.com/github/gitignore)
 git diff|list unstaged changes
-git diff --staged|list staged changes compared to last commit
+git diff --cached|list staged changes compared to last commit. --staged is a synonym of --cached
 git commit|record changes to repo. Text editor launched for commit message
 git commit -m 'commit message'|commit with message inline
+git commit -m 'concise description ~50 chars' -m 'detailed description'|commit message guideline from Pro Git book
 git rm filename|remove file from tracked files as well as working directory (if it exists)
 git rm '*.log'|recursively remove using wildcard
 git rm --cached filename|unstage and remove from tracked files but keep in working directory
