@@ -7,6 +7,8 @@ export name=value|set environment variable. export not needed to modify variable
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
 grep -ir pattern file|recursive case-insensitive search for pattern|grep -ir "color_scheme" ~/.config
+head -n num filename|print first num lines of file|head -n 3 server.log
+head -n -num filename|print all but last num lines of file|head -n -3 server.log
 ln -s target linkname|create symlink|ln -s server-1.0.jar server.jar
 md5sum filename|print MD5 checksum|md5sum geany-1.28.tar.gz
 mkdir -p path|created nested directory including parent dirs as needed|mkdir -p ~/games/hacx
@@ -14,6 +16,7 @@ netstat -an|print networking info with numeric addresses|netstat -an
 printenv|print all or specified environment variables|printenv PATH JAVA_HOME
 ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
+rmdir somedir|remove empty directory|rmdir tmpdir
 scp -rp srcfile destfile|recursively copy directory|scp -rp somedir user@dest:/path
 script filename|typescript of terminal session with timestamp in filename. exit when done|script somefile_\`date +%Y%m%dT%H%M%S\`.log
 screen|create screen session. ^a then d to detach screen from terminal|screen
@@ -24,6 +27,8 @@ sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text fi
 sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g somefile
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
 sudo -u username command|run command as another user|sudo -u foo ls -l
+tail -n num filename|print last num lines of file|tail -n 3 server.log
+tail -n +num filename|print from line num to end of file|tail -n +3 server.log
 tail -F filename|output appended data to file and retry if inaccessible|tail -F server.log
 tar cvf tarfile filename|collect files into one archive file|tar cvf docs.tar foo.ods bar.kdbx
 tar czvf gziptarfile filename|collect files into one archive file and compress with gzip|tar czvf docs.tar.gz ~/Documents
