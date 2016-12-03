@@ -3,16 +3,20 @@ Command|Description|Example
 alias name='command'|create command shortcut|alias ..='cd ..'
 at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
 cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
+expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
 grep -ir pattern file|recursive case-insensitive search for pattern|grep -ir "color_scheme" ~/.config
 head -n num filename|print first num lines of file|head -n 3 server.log
 head -n -num filename|print all but last num lines of file|head -n -3 server.log
+kill -9 pid|send SIGKILL to process to cause it to terminate immediately|kill -9 1234
 ln -s target linkname|create symlink|ln -s server-1.0.jar server.jar
+ls -ltr|list dir contents, oldest first. -l long listing format. -t sort by mod time, newest first. -r reverse sort order. -a include dotfiles. -h human readable sizes. -d list dirs themselves not dir contents. -R list subdirs recursively|ls -ltr
 md5sum filename|print MD5 checksum|md5sum geany-1.28.tar.gz
 mkdir -p path|created nested directory including parent dirs as needed|mkdir -p ~/games/hacx
 netstat -an|print networking info with numeric addresses|netstat -an
+nl filename|number lines of files|nl foo.txt
 printenv|print all or specified environment variables|printenv PATH JAVA_HOME
 ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
@@ -25,8 +29,10 @@ screen -r sessionname|resume detached screen session|screen -r upgrade
 screen -list|print screen sessions|screen -list
 sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text file|sed 's/from/to/g' somefile
 sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g somefile
+seq first increment last|print sequence of numbers. seq last. seq first last. first and increment default to 1|seq 2 3 15
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
 sudo -u username command|run command as another user|sudo -u foo ls -l
+tac filename|concat and print files in reverse|tac foo.txt bar.txt > baz.txt
 tail -n num filename|print last num lines of file|tail -n 3 server.log
 tail -n +num filename|print from line num to end of file|tail -n +3 server.log
 tail -F filename|output appended data to file and retry if inaccessible|tail -F server.log
