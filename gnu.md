@@ -17,6 +17,7 @@ md5sum filename|print MD5 checksum|md5sum geany-1.28.tar.gz
 mkdir -p path|created nested directory including parent dirs as needed|mkdir -p ~/games/hacx
 netstat -an|print networking info with numeric addresses|netstat -an
 nl filename|number lines of files|nl foo.txt
+nohup command|ignore SIGHUP when its controlling terminal closed|nohup python httpsim.py >/dev/null 2>&1 &
 printenv|print all or specified environment variables|printenv PATH JAVA_HOME
 ps -ef|print all processes with full-format listing|ps -ef
 rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
