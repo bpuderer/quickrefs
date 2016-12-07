@@ -7,7 +7,8 @@ expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
-grep -ir pattern file|recursive case-insensitive search for pattern|grep -ir "color_scheme" ~/.config
+grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config
+grep -ir --include=glob pattern|recursive case-insensitive search for pattern only searching files matching GLOB|grep -ir --include="*.py" "yield"
 head -n num filename|print first num lines of file|head -n 3 server.log
 head -n -num filename|print all but last num lines of file|head -n -3 server.log
 kill -9 pid|send SIGKILL to process to cause it to terminate immediately|kill -9 1234
