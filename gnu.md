@@ -19,6 +19,9 @@ ln -s target linkname|create symlink|ln -s server-1.0.jar server.jar
 ls -ltr|list dir contents, oldest first. -l long listing format. -t sort by mod time, newest first. -r reverse sort order. -a include dotfiles. -h human readable sizes. -d list dirs themselves not dir contents. -R list subdirs recursively|ls -ltr
 md5sum filename|print MD5 checksum|md5sum geany-1.28.tar.gz
 mkdir -p path|created nested directory including parent dirs as needed|mkdir -p ~/games/hacx
+mktemp|safely/securely create temporary file and print name. file created in $TMPDIR if set, /tmp otherwise|mktemp
+mktemp -p dir|safely/securely create temporary file in specified directory and print name|mktemp -p ~/mytmp
+mktemp -d|safely/securely create temporary directory and print name|mktemp -d
 netstat -an|print networking info with numeric addresses|netstat -an
 nl filename|number lines of files|nl foo.txt
 nohup command|ignore SIGHUP when its controlling terminal closed|nohup python httpsim.py >/dev/null 2>&1 &
