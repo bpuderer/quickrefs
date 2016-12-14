@@ -52,7 +52,11 @@ git merge branchname|merge specified branch into current branch and record as a 
 git branch -a|list remote and local branches
 git branch -d branchname|delete branch
 git rebase branchname|rebase current branch with specified branch
-
+git stash|save local mods and revert working directory to match HEAD commit
+git stash list|list stashes
+git stash apply|apply changes in most recent stash. stash is not removed. can also specify id
+git stash drop|remove most recent stash. can also specify id
+git stash show -p|show changes in most recent stash. can also specify id
 
 [Reference Manual](https://git-scm.com/docs)
 
