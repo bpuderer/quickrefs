@@ -21,7 +21,7 @@ git rm filename|remove file from tracked files as well as working directory (if 
 git rm '*.log'|recursively remove using wildcard
 git rm --cached filename|unstage and remove from tracked files but keep in working directory
 git mv oldname newname|shortcut to rename a file for next commit
-git log|view commit history
+git log|view commit history.  --reverse.
 git log --stat -5|last 5 commits with abbreviated stats
 git commit --amend|re-commit
 git reset|unstage all files
@@ -57,6 +57,7 @@ git stash list|list stashes
 git stash apply|apply changes in most recent stash. stash is not removed. can also specify id
 git stash drop|remove most recent stash. can also specify id
 git stash show -p|show changes in most recent stash. can also specify id
+git revert commit|new commit to reverse earlier commit
 
 [Reference Manual](https://git-scm.com/docs)
 
