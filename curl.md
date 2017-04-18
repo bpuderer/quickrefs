@@ -1,0 +1,15 @@
+Option|Description
+---|---
+--connect-timeout <seconds>|Number of seconds connection is allowed to take
+-d, --data <data>|Sends specified <data> in POST. If data starts with "@" then it reads from file. ASCII.  For binary, use --data-binary
+-H, --header <header>|Add header
+-i, --include|Display response headers
+-m, --max-time <seconds>|Number of seconds whole operation is allowed to take
+-o, --output <file>|Write output to file instead of stdout
+-X, --request <command>|HTTP request method. Usually not needed since options specify method. Commonly used for DELETE and PUT
+-s, --silent|Silent mode
+--trace-time|Add timestamps to trace/verbose log lines
+--trace <file>|Full trace dump. Use "-" as file to send to stdout
+--trace-ascii <file>|Full trace dump, ascii only. Use "-" as file to send to stdout
+-v, --verbose|Verbose output
+-w, --write-out <format>|Write output to stdout according to format. See man page for list of variables. Ex. curl -s -o /dev/null -w "%{http_code}\n" http://localhost:1234/api/v1/test
