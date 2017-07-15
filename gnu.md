@@ -39,6 +39,8 @@ sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text fi
 sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g somefile
 seq first increment last|print sequence of numbers. seq last. seq first last. first and increment default to 1|seq 2 3 15
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
+ss -ta|all TCP sockets|ss -ta
+ss -ltn|listening TCP sockets, no name resolution|ss -ltn
 sudo -u username command|run command as another user|sudo -u foo ls -l
 tac filename|concat and print files in reverse|tac foo.txt bar.txt > baz.txt
 tail -n num filename|print last num lines of file|tail -n 3 server.log
