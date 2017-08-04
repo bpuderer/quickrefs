@@ -5,13 +5,13 @@ at timespec|read commands from stdin or file and queue for later execution using
 cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
 expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
-find startingpoint -name pattern -exec command \;|find files and execute command. {} replaced with current file name being processed|find . -name "\*.txt" -exec touch {} \;
+find startingpoint -name pattern -exec command \\;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \\;
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
-grep -n pattern file|search for pattern and prefix output with line number|grep -n "yield" \*.py
-grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config
-grep -ir --include=glob pattern|recursive case-insensitive search for pattern, only searching files matching GLOB|grep -ir --include="\*.py" "yield"
-grep -l pattern file|search for pattern, print name of each file containing match|grep -l "yield" \*.py
-grep -c pattern file &#124; grep -v :0|search for pattern, print name of each file containing match with number of matching lines|grep -c "yield" \*.py &#124; grep -v :0
+grep -n pattern file|search for pattern and prefix output with line number|grep -n "yield" *.py
+grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config grep -r '[0-9]\\{3\\}-[0-9]\\{3\\}-[0-9]\\{4\\}'
+grep -ir --include=glob pattern|recursive case-insensitive search for pattern, only searching files matching GLOB|grep -ir --include="*.py" "yield"
+grep -l pattern file|search for pattern, print name of each file containing match|grep -l "yield" *.py
+grep -c pattern file &#124; grep -v :0|search for pattern, print name of each file containing match with number of matching lines|grep -c "yield" *.py &#124; grep -v :0
 head -n num filename|print first num lines of file|head -n 3 server.log
 head -n -num filename|print all but last num lines of file|head -n -3 server.log
 kill -9 pid|send SIGKILL to process to cause it to terminate immediately|kill -9 1234
@@ -31,8 +31,8 @@ rm -rf somedir|recursive delete without prompting|rm -rf ~/wip
 rmdir somedir|remove empty directory|rmdir tmpdir
 scp -rp srcfile destfile|recursively copy directory|scp -rp somedir user@dest:/path
 script filename|typescript of terminal session with timestamp in filename. exit when done|script somefile_\`date +%Y%m%dT%H%M%S\`.log
-screen|create screen session. ^a then d to detach screen from terminal|screen
-screen -S sessionname|create and name screen session. ^a then d to detach screen from terminal|screen -S upgrade
+screen|create screen session. Ctrl-a then d to detach screen from terminal|screen
+screen -S sessionname|create and name screen session. Ctrl-a then d to detach screen from terminal|screen -S upgrade
 screen -r sessionname|resume detached screen session|screen -r upgrade
 screen -list|print screen sessions|screen -list
 sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text file|sed 's/from/to/g' somefile
