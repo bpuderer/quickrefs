@@ -9,7 +9,7 @@ find startingpoint -name pattern -exec command \\;|find files and execute comman
 grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
 grep -n pattern file|search for pattern and prefix output with line number|grep -n "yield" *.py
 grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config
-grep -rho --include=glob pattern|recursive search for pattern, -h to suppress filename prefix and -o to only include match|grep -rho --include=*.html '[0-9]\{3\}-[0-9]\{3\}-[0-9]\{4\}'
+grep -rho --include=glob pattern|recursive search for pattern, -h to suppress filename prefix and -o to only include match|grep -rho --include=*.html '[0-9]\\{3\\}-[0-9]\\{3\\}-[0-9]\\{4\\}'
 grep -ir --include=glob pattern|recursive case-insensitive search for pattern, only searching files matching GLOB|grep -ir --include="*.py" "yield"
 grep -l pattern file|search for pattern, print name of each file containing match|grep -l "yield" *.py
 grep -c pattern file &#124; grep -v :0|search for pattern, print name of each file containing match with number of matching lines|grep -c "yield" *.py &#124; grep -v :0
