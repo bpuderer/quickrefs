@@ -1,0 +1,18 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE artists (id integer primary key, name text);
+INSERT INTO "artists" VALUES(1,'Led Zeppelin');
+INSERT INTO "artists" VALUES(2,'Black Sabbath');
+INSERT INTO "artists" VALUES(3,'Deep Purple');
+CREATE TABLE tracks (id integer primary key, name text, year integer, artist_id integer);
+INSERT INTO "tracks" VALUES(1,'Black Dog',1971,1);
+INSERT INTO "tracks" VALUES(2,'Song Remains the Same',1974,1);
+INSERT INTO "tracks" VALUES(3,'Heartbreaker',1969,1);
+INSERT INTO "tracks" VALUES(4,'Zero the Hero',1983,2);
+INSERT INTO "tracks" VALUES(5,'I',1992,2);
+INSERT INTO "tracks" VALUES(6,'Afterimage',1984,NULL);
+INSERT INTO "tracks" VALUES(7,'N.I.B.',1970,2);
+INSERT INTO "tracks" VALUES(8,'Child in Time',1970,3);
+INSERT INTO "tracks" VALUES(9,'Mistreated',1974,3);
+INSERT INTO "tracks" VALUES(10,'Highway Star',1972,3);
+COMMIT;
