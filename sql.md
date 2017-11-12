@@ -71,6 +71,7 @@ year
 1970
 1972
 sqlite>
+sqlite> /* =, !=, >, <, >=, <= */
 sqlite> select year, name from tracks where year > 1972;
 year        name
 ----------  ---------------------
@@ -87,7 +88,22 @@ year        name
 1974        Mistreated
 1972        Highway Star
 sqlite>
-sqlite> select name from tracks where name like '%the%';
+sqlite> select * from tracks where year in (1974, 1970) order by year desc, name asc;
+id          name        year        artist_id 
+----------  ----------  ----------  ----------
+9           Mistreated  1974        3         
+2           Song Remai  1974        1         
+8           Child in T  1970        3         
+7           N.I.B.      1970        2
+sqlite>
+sqlite> select * from tracks where artist_id is null;
+id          name        year        artist_id 
+----------  ----------  ----------  ----------
+6           Afterimage  1984
+sqlite>
+sqlite> /* % wildcard matches 0+ chars, _ matches single char */
+sqlite> /* like is case insensitive */
+sqlite> select name from tracks where name like '%The%';
 name
 ---------------------
 Song Remains the Same
@@ -160,6 +176,7 @@ count(*)
 ----------
 9
 sqlite>
+sqlite> /* inner join will combine rows from different tables if the join condition is true */
 sqlite> select * from tracks join artists on tracks.artist_id=artists.id;
 id          name        year        artist_id   id          name
 ----------  ----------  ----------  ----------  ----------  ------------
@@ -172,6 +189,7 @@ id          name        year        artist_id   id          name
 8           Child in T  1970        3           3           Deep Purple
 10          Highway St  1972        3           3           Deep Purple
 sqlite>
+sqlite> /* outer joins do not require the join condition to be met to be included in results */
 sqlite> select * from tracks left join artists on tracks.artist_id=artists.id;
 id          name        year        artist_id   id          name
 ----------  ----------  ----------  ----------  ----------  ------------
