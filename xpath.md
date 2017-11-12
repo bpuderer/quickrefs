@@ -9,11 +9,11 @@
   </employee>
   <employee id="456">
     <name>Eric Idle</name>
-    <sketch>Nudge Nudge</sketch>
+    <sketch>  Nudge Nudge  </sketch>
   </employee>
   <employee id="789">
     <name almaMater="University of Oxford">Michael Palin</name>
-    <sketch>The Fish-Slapping Dance</sketch>
+    <sketch>The Fish Slapping Dance</sketch>
   </employee>
 </employeeInfo>
 
@@ -56,6 +56,12 @@ Name of employees who went to Oxford
 
 John Cleese's alma mater:
 //name[text()='John Cleese']/@almaMater
+
+Employees whose sketch when normalized is Nudge Nudge and name contains Idle
+//employee[normalize-space(sketch)='Nudge Nudge'][contains(name, 'Idle')]
+
+Employees whose sketch is The Fish Slapping Dance or The Ministry of Silly Walks
+//employee[sketch='The Fish Slapping Dance' or sketch='The Ministry of Silly Walks']
 
 Employees with alma mater populated
 //name[@almaMater]/..
