@@ -1,0 +1,71 @@
+# xpath
+
+```
+<?xml version="1.0"?>
+<employeeInfo>
+  <employee id="123">
+    <name almaMater="Downing College">John Cleese</name>
+    <sketch>The Ministry of Silly Walks</sketch>
+  </employee>
+  <employee id="456">
+    <name>Eric Idle</name>
+    <sketch>Nudge Nudge</sketch>
+  </employee>
+  <employee id="789">
+    <name almaMater="University of Oxford">Michael Palin</name>
+    <sketch>The Fish-Slapping Dance</sketch>
+  </employee>
+</employeeInfo>
+
+
+All child employee elements of employeeInfo
+/employeeInfo/employee
+
+All employee elements in entire doc
+//employee
+
+All employee descendants of employeeInfo
+/employeeInfo//employee
+
+Number of employee elements in entire doc
+count(//employee)
+
+Employees with id = 456
+//employee[@id=456]
+
+Second employee name text
+//employee[2]/name/text()
+
+Third employee almaMater attribute
+//employee[3]/name/@almaMater
+
+Employees whose name is John Cleese
+//employee[name='John Cleese']
+
+Employees whose name starts with John
+//employee[starts-with(name, 'John')]
+
+Names that start with John
+//employee/name[starts-with(., 'John')]/text()
+
+Employees who went to Oxford
+//employee/name[@almaMater='University of Oxford']/..
+
+Name of employees who went to Oxford
+//employee/name[@almaMater='University of Oxford']/text()
+
+John Cleese's alma mater:
+//name[text()='John Cleese']/@almaMater
+
+Employees with alma mater populated
+//name[@almaMater]/..
+
+Last employee
+//employee[last()]
+
+All employee child elements
+//employee/*
+
+All employee elements and name elements
+//employee|//name
+```
