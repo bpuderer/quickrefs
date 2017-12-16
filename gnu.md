@@ -37,7 +37,7 @@ screen -S sessionname|create and name screen session. Ctrl-a then d to detach sc
 screen -r sessionname|resume detached screen session|screen -r upgrade
 screen -list|print screen sessions|screen -list
 sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text file|sed 's/from/to/g' somefile
-sed -e 's/from/to/g' -e 's/here/there/g somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g somefile
+sed -e 's/from/to/g' -e 's/here/there/g' somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g' somefile
 seq first increment last|print sequence of numbers. seq last. seq first last. first and increment default to 1|seq 2 3 15
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
 ss -ta|all TCP sockets|ss -ta
