@@ -1,18 +1,21 @@
 Command|Description|Example
 ---|---|---
 alias name='command'|create command shortcut|alias ..='cd ..'
+base64 filename|base64 encode file to stdout. base64 can also read from stdin|base64 filename
+base64 -w0 filename|base64 encode file to stdout with no line wrapping. default=76|base64 -w0 filename
+base64 -d filename|base64 decode file to stdout.|base64 -d < infile > outfile
 at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
 cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
 expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \\;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \\;
-grep -E 'pattern1&#124;pattern2'|grep with logical or|tail -F server.log &#124; grep -E 'ERROR&#124;FATAL'
+grep -E 'pattern1\|pattern2'|grep with logical or|tail -F server.log \| grep -E 'ERROR\|FATAL'
 grep -n pattern file|search for pattern and prefix output with line number|grep -n "yield" *.py
 grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config
 grep -rho --include=glob pattern|recursive search for pattern, -h to suppress filename prefix and -o to only include match|grep -rho --include=*.html '[0-9]\\{3\\}-[0-9]\\{3\\}-[0-9]\\{4\\}'
 grep -ir --include=glob pattern|recursive case-insensitive search for pattern, only searching files matching GLOB|grep -ir --include="*.py" "yield"
 grep -l pattern file|search for pattern, print name of each file containing match|grep -l "yield" *.py
-grep -c pattern file &#124; grep -v :0|search for pattern, print name of each file containing match with number of matching lines|grep -c "yield" *.py &#124; grep -v :0
+grep -c pattern file \| grep -v :0|search for pattern, print name of each file containing match with number of matching lines|grep -c "yield" *.py \| grep -v :0
 head -n num filename|print first num lines of file|head -n 3 server.log
 head -n -num filename|print all but last num lines of file|head -n -3 server.log
 kill -9 pid|send SIGKILL to process to cause it to terminate immediately|kill -9 1234
@@ -40,7 +43,7 @@ sed 's/from/to/g' somefile|replace every instance of "from" with "to" in text fi
 sed -e 's/from/to/g' -e 's/here/there/g' somefile|replace every instance of "from" with "to" and "here" with "there" in text file|sed -e 's/from/to/g' -e 's/here/there/g' somefile
 seq first increment last|print sequence of numbers. seq last. seq first last. first and increment default to 1|seq 2 3 15
 sha1sum filename|print SHA1 checksum|sha1sum geany-1.28.tar.gz > geany-1.28.tar.gz.sha1
-ss -ta|all TCP sockets|ss -ta
+ss -ta|socket stats tool. list all TCP sockets|ss -ta
 ss -ltn|listening TCP sockets, no name resolution|ss -ltn
 sudo -u username command|run command as another user|sudo -u foo ls -l
 tac filename|concat and print files in reverse|tac foo.txt bar.txt > baz.txt
@@ -54,10 +57,10 @@ tar xvf tarfile|extract tar file|tar xvf file.tar
 tar xzvf gziptarfile|extract gzip'd tar file|tar xzvf file.tar.gz
 tee filename|read from stdin and write to stdout and file|tail -F server.log &#124; tee test123.log
 touch filename|update access and mod time to current time. empty file created if filename does not exist|touch temp.txt
-tr -d 'charstodelete'|delete characters from stdin|tr -d '\r' < infile > outfile
+tr -d 'charstodelete'|delete characters from stdin|tr -d '\r\n' < infile > outfile
 uname -a|print system info|uname -a
 watch -n numseconds command|continually run command|watch -n 5 ls -l
-wc -l|print number of lines|grep -o IOError server.log &#124; wc -l
+wc -l|print number of lines|grep -o IOError server.log \| wc -l
 while true; do command; sleep numseconds; done|continually run command|while true; do ls -l; sleep 5; done
 wget url|download file from ftp/http/https|wget http://download.geany.org/geany-1.28.tar.gz
 
