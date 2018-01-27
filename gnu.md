@@ -9,6 +9,7 @@ cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
 expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \\;|find files and execute command. {} replaced with current file name being processed|find . -name "*.txt" -exec touch {} \\;
+for var in list; do commands; done|for loop in bash|for i in {1..3}; do echo $i; sleep 1; done<br>for i in *.txt; do echo -n "$i: "; base64 $i \| head -n 1; done
 grep -E 'pattern1\|pattern2'|grep with logical or|tail -F server.log \| grep -E 'ERROR\|FATAL'
 grep -n pattern file|search for pattern and prefix output with line number|grep -n "yield" *.py
 grep -r pattern|recursive search for pattern in working dir. can provide dir|grep -r "color_scheme" ~/.config
