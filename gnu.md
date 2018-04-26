@@ -57,6 +57,7 @@ tar tvf tarfile|list contents of archive file|tar tvf docs.tar.gz
 tar xvf tarfile|extract tar file|tar xvf file.tar
 tar xzvf gziptarfile|extract gzip'd tar file|tar xzvf file.tar.gz
 tee filename|read from stdin and write to stdout and file|tail -F server.log &#124; tee test123.log
+time command|duration of command execution|time sleep 3
 touch filename|update access and mod time to current time. empty file created if filename does not exist|touch temp.txt
 tr -d 'charstodelete'|delete characters from stdin|tr -d '\r\n' < infile > outfile
 uname -a|print system info|uname -a
@@ -64,6 +65,7 @@ watch -n numseconds command|continually run command|watch -n 5 ls -l
 wc -l|print number of lines|grep -o IOError server.log \| wc -l
 while true; do command; sleep numseconds; done|continually run command|while true; do ls -l; sleep 5; done
 wget url|download file from ftp/http/https|wget http://download.geany.org/geany-1.28.tar.gz
+xclip -sel clip|copy to clipboard. GPLv2|ls -la \| xclip -sel clip
 
 Cron|Description
 ---|---
