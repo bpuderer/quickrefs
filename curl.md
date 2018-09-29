@@ -4,6 +4,7 @@ Option|Description
 -d, --data data|Sends specified data in POST with content-type application/x-www-form-urlencoded. If data starts with "@" then it reads from file. ASCII.  For binary, use --data-binary
 -H, --header header|Add header
 -i, --include|Display response headers
+-L, --location|Follow the redirect when 3xx code and Location header returned
 -m, --max-time seconds|Number of seconds whole operation is allowed to take
 -o, --output filename|Write output to file instead of stdout
 -X, --request command|HTTP request method. Usually not needed since options specify method. Commonly used for DELETE and PUT
