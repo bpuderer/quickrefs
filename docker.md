@@ -2,7 +2,7 @@ Command|Description
 ---|---
 docker --version, docker version|
 docker info|
-docker build -t \<image> .|create Docker image and specify name
+docker build -t \<name>:\<optional tag> \<path>|create Docker image from Dockerfile and name
 docker image ls|list images
 docker image rm \<image>|remove image
 docker image rm $(docker image ls -a -q)|remove all images
