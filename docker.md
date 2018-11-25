@@ -39,7 +39,7 @@ docker-machine ssh \<machine> "\<command>"|send command to machine
 docker-machine ssh \<machine> "docker swarm init --advertise-addr \<machine ip>"|instruct machine to become swarm manager. will include command to send to other machines to join swarm
 docker-machine env \<machine>|get commands to configure local shell to talk to machine rather than using docker-machine ssh
 docker-machine ls|check status of machines
-docker-machine scp <file> <machine>:~|scp file to machine (Compose yaml to manager to run docker stack deploy)
+docker-machine scp \<file> \<machine>:~|scp file to machine (Compose yaml to manager to run docker stack deploy)
 docker-machine stop $(docker-machine ls -q)|stop all running VMs
 docker-machine rm $(docker-machine ls -q)|delete all VMs and images
 docker node demote \<node>|demote manager to worker
