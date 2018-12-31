@@ -10,5 +10,6 @@ pip uninstall *package*|uninstall package
 pydoc -p *port*|start local http server serving python documentation on specified port
 virtualenv *ENV*<br>source *ENV*/bin/activate<br>...<br>deactivate|basic virtualenv usage. if windows, activate by running *ENV*/Scripts/activate
 virtualenv -p python3 *ENV*<br>source *ENV*/bin/activate<br>...<br>deactivate|virtualenv usage with specified python interpreter
-_|use "_" as a throwaway variable
-reload(*module*)|Reload module. Useful when debugging with interpreter and editing the source
+python3 -m venv *ENV*<br>source *ENV*/bin/activate<br>...<br>deactivate|basic virtual environment usage
+_|use "_" as a throwaway variable, stores result of last calculation in interpreter
+reload(*module*)|Reload module. Useful when debugging with interpreter and editing the source. If python3, import required: **from importlib import reload**
