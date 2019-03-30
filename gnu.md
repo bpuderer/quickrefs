@@ -7,7 +7,7 @@ base64 -d filename|base64 decode file to stdout|base64 -d < infile > outfile
 at timespec|read commands from stdin or file and queue for later execution using /bin/sh. atq lists pending jobs and atrm jobnumber deletes job from queue|at now + 1 minutes <<< 'touch /tmp/atdemo'
 cp -r srcfile destfile|recursively copy directory|cp -r dir1 dir1_bkup
 cp -a srcfile destfile|recursively copy directory with preservation|cp -a dir1 dir1_bkup
-echo 'somestr'|echo string to stdout|echo 'export PATH=$HOME/bin:$PATH' >> ~/.profile
+echo 'somestr'|echo string to stdout. -n to suppress newline|echo 'export PATH=$HOME/bin:$PATH' >> ~/.profile<br>echo -n 'foo' \| base64 -w0
 expand -t 4 filename|convert tabs to 4 spaces|expand -t 4 tabs.txt > spaces.txt
 export name=value|set environment variable. export not needed to modify variables already in the environment. e.g. PATH=$PATH:/opt/apache-ant-1.9.7/bin|export FOO=bar
 find startingpoint -name pattern -exec command \\;|find files and execute command. {} replaced with current file name being processed|find . -name "\*.txt" -exec touch {} \\;
