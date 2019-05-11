@@ -5,10 +5,12 @@ element|Element/Type/Tag|a|Select all a elements
 a b|Descendant|#123 div|Selects all div (anywhere) inside of element with id="123"
 .class|Class|div.intro|Selects all div elements with class="intro" (attribute)
 [attribute]|Attribute|div[size]|Selects div elements with size attribute
-[attribute="value"]|Attribute Value|div[size="10"]|Selects div elements with size="10"
+[attribute="value"]|Attribute Value|div[size="10"][lang="en-US"]|Selects div elements with size="10" and lang="en-US"
 [attribute^="value"]|Attribute Starts With|div[size^="10"]|Selects div elements with size attribute values starting with "10"
 [attribute$="value"]|Attribute Ends With|div[size$="00"]|Selects div elements with size attribute values ending with "00"
-[attribute*="value"]|Attribute Wildcard|div[size*="500"]|Selects div elements with size attribute values containing "500"
+[attribute*="value"]|Attribute Contains|div[size*="500"]|Selects div elements with size attribute values containing substring "500"
+[attribute~="value]|Attribute Contains Word|div[size~="500"]|Selects the div elements with size attribute values containing word "500". " 500", "500 ", " 500 "
+[attribute\|="value]|Attribute Contains Prefix|div[lang\|="en"]|Selects div elements with lang attribute starting with "en-" or matching "en".
 a , b|Comma Combiner|div,.intro|Selects all div and all with class="intro"
 \*|Universal|div *|Selects all elements inside all div
 a + b|Adjacent Sibling|p+div|Selects div elements that immediately follow p elements
