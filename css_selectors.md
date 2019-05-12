@@ -1,6 +1,6 @@
 Selector|Name|Example|Description
 ---|---|---|---
-element|Element/Type/Tag|a|Select all a elements
+element|Element|a|Select all a elements
 \#id|ID|#123|Selects element with specific id="123"
 a b|Descendant|#123 div|Selects all div (anywhere) inside of element with id="123"
 .class|Class|div.intro|Selects all div elements with class="intro" (attribute)
@@ -27,3 +27,5 @@ a > b|Child|p > div|Selects div elements that are direct children of p elements
 :last-of-type|Last of Type|div:last-of-type|Selects the last div elements
 :empty|Empty|:empty|Elements with no children
 :not(X)|Negation|div:not(.intro)|Selects div elements without class="intro"
+
+[CSS Diner](https://flukeout.github.io/)
