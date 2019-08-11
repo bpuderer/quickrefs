@@ -8,6 +8,7 @@ docker image rm \<image>|remove image
 docker image rm $(docker image ls -a -q)|remove all images
 docker run -p \<host port>:\<container port> \<image>|run container and publish container port to host port. -d option to run in detached/background mode
 docker run -p \<host port>:\<container port> username/repository:tag|run from remote repository
+docker run --rm -it -e PY_TEST_ENV='env1' python:3 bash|docker run \[OPTIONS] IMAGE \[COMMAND] \[ARG...] --rm remove container on exit. -it interactive tty. -e env vars. --entrypoint to override image's default ENTRYPOINT
 docker container start \<container>|start stopped container
 docker container stop \<container>|stop container
 docker ps|list running containers. -a to show all
@@ -15,8 +16,9 @@ docker container ls|list running containers. -a to show all
 docker container inspect \<container>|detailed info of container
 docker container rm \<container>|remove container
 docker container rm $(docker container ls -a -q)|remove all containers
-docker logs <container>|return container logs. add -f to follow. --tail=\<# lines>
-docker attach --sig-proxy=false <container>|attach to running container. set --sig-proxy=false so ^C does not stop container
+docker logs \<container>|return container logs. add -f to follow. --tail=\<# lines>
+docker attach --sig-proxy=false \<container>|attach to running container. set --sig-proxy=false so ^C does not stop container
+docker cp \<container>:\<path> \<host path>|copy file from container
 docker login|login to hub.docker.com
 docker tag \<image> \<username>/\<repository>:\<tag>|tag image
 docker push \<username>/\<repository>:\<tag>|publish image to registry
@@ -45,7 +47,7 @@ docker-machine rm $(docker-machine ls -q)|delete all VMs and images
 docker node demote \<node>|demote manager to worker
 
 
-container- runtime instance of image  
+container - runtime instance of image  
 image - executable package which includes everything needed to run  
 registry - collection of repositories  
 repository - collection of images  
@@ -61,6 +63,7 @@ stack - group of interrelated services that share dependencies, and can be orche
 
 
 [Get Started](https://docs.docker.com/get-started/)  
+[Docker CE Ubuntu Install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)  
 [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)  
 [Docker Machine CLI](https://docs.docker.com/machine/reference/)  
 [Dockerfile](https://docs.docker.com/engine/reference/builder/)  
