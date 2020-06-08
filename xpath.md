@@ -55,6 +55,7 @@ Name of employees who went to Oxford
 //employee/name[@almaMater='University of Oxford']/text()
 
 John Cleese's alma mater:
+//name[.='John Cleese']/@almaMater
 //name[text()='John Cleese']/@almaMater
 
 Employees whose sketch when normalized is Nudge Nudge and name contains Idle
