@@ -49,7 +49,7 @@ Names that start with John
 //employee/name[starts-with(., 'John')]/text()
 
 Employees who went to Oxford
-//employee/name[@almaMater='University of Oxford']/..
+//employee[name[@almaMater='University of Oxford']]
 
 Name of employees who went to Oxford
 //employee/name[@almaMater='University of Oxford']/text()
@@ -59,12 +59,13 @@ John Cleese's alma mater:
 
 Employees whose sketch when normalized is Nudge Nudge and name contains Idle
 //employee[normalize-space(sketch)='Nudge Nudge'][contains(name, 'Idle')]
+//employee[normalize-space(sketch)='Nudge Nudge' and contains(name, 'Idle')]
 
 Employees whose sketch is The Fish Slapping Dance or The Ministry of Silly Walks
 //employee[sketch='The Fish Slapping Dance' or sketch='The Ministry of Silly Walks']
 
 Employees with alma mater populated
-//name[@almaMater]/..
+//employee[name[@almaMater]]
 
 Last employee
 //employee[last()]
