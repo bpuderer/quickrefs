@@ -18,6 +18,17 @@
 </employeeInfo>
 
 
+Name element with text = John Cleese
+//name[text()='John Cleese']
+//name[.='John Cleese']
+
+... or contains eese
+//name[contains(text(), 'eese']
+
+Name element with attribute = Downing College
+//name[@almaMater='Downing College']
+
+
 All child employee elements of employeeInfo
 /employeeInfo/employee
 
