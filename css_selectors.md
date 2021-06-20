@@ -1,3 +1,5 @@
+NOTE: CSS selectors [cannot](https://stackoverflow.com/questions/1520429/is-there-a-css-selector-for-elements-containing-certain-text) be used to retrieve elements based on element text. Use xpath instead
+
 Selector|Name|Example|Description
 ---|---|---|---
 element|Element|a|Select all a elements
@@ -12,7 +14,7 @@ a b|Descendant|#123 div|Selects all div (anywhere) inside of element with id="12
 [attribute~="value]|Attribute Contains Word|div[size~="500"]|Selects the div elements with size attribute values containing word "500". " 500", "500 ", " 500 "
 [attribute\|="value]|Attribute Contains Prefix|div[lang\|="en"]|Selects div elements with lang attribute starting with "en-" or matching "en".
 a , b|Comma Combiner|div,.intro|Selects all div and all with class="intro"
-\*|Universal|div *|Selects all elements inside all div
+\*|Universal|div \*|Selects all elements inside all div
 a + b|Adjacent Sibling|p+div|Selects div elements that immediately follow p elements
 a ~ b|General Sibling|p~div|Selects div elements that follow p elements
 a > b|Child|p > div|Selects div elements that are direct children of p elements
