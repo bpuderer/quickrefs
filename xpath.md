@@ -19,11 +19,12 @@
 
 
 Name element with text = John Cleese
-//name[text()='John Cleese']
 //name[.='John Cleese']
+//name[text()='John Cleese']
 
 ... or contains eese
-//name[contains(text(), 'eese']
+//name[contains(., 'eese')]
+//name[contains(text(), 'eese')]
 
 Name element with attribute = Downing College
 //name[@almaMater='Downing College']
