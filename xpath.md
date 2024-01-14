@@ -14,6 +14,10 @@
   <employee id="789">
     <name almaMater="University of Oxford">Michael Palin</name>
     <sketch>The Fish Slapping Dance</sketch>
+    <books>
+      <book>Around the World in 80 Days</book>
+      <book>Brazil</book>
+    </books>
   </employee>
 </employeeInfo>
 
@@ -79,6 +83,9 @@ Employees whose sketch is The Fish Slapping Dance or The Ministry of Silly Walks
 
 Employees with alma mater populated
 //employee[name[@almaMater]]
+
+Employees who wrote the book Brazil
+//employee[books[book[text()='Brazil']]]
 
 Last employee
 //employee[last()]
