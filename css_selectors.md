@@ -4,15 +4,19 @@ Selector|Name|Example|Description
 ---|---|---|---
 element|Element|a|Select all a elements
 \#id|ID|#123|Selects element with specific id="123"
+tag\#id|ID|input\#q|Selects all input elements with id="q"
+\#id.class|ID|\#column-a.q|Selects all elements with id="column-a" and class="q"
 a b|Descendant|#123 div|Selects all div (anywhere) inside of element with id="123"
-.class|Class|div.intro|Selects all div elements with class="intro" (attribute)
+.class|Class|.intro|Selects all elements with class="intro"
+.class1.class2.classn|Class|.btn.btn-lg.btn-success|Selects all elements with those classes. e.g. \<button class="btn btn-lg btn-success">
+tag.class|Class|div.intro|Selects all div elements with class="intro"
 [attribute]|Attribute|div[size]|Selects div elements with size attribute
 [attribute="value"]|Attribute Value|div[size="10"][lang="en-US"]|Selects div elements with size="10" and lang="en-US"
 [attribute^="value"]|Attribute Starts With|div[size^="10"]|Selects div elements with size attribute values starting with "10"
 [attribute$="value"]|Attribute Ends With|div[size$="00"]|Selects div elements with size attribute values ending with "00"
 [attribute*="value"]|Attribute Contains|div[size*="500"]|Selects div elements with size attribute values containing substring "500"
-[attribute~="value]|Attribute Contains Word|div[size~="500"]|Selects the div elements with size attribute values containing word "500". " 500", "500 ", " 500 "
-[attribute\|="value]|Attribute Contains Prefix|div[lang\|="en"]|Selects div elements with lang attribute starting with "en-" or matching "en".
+[attribute~="value"]|Attribute Contains Word|div[size~="500"]|Selects the div elements with size attribute values containing word "500". " 500", "500 ", " 500 "
+[attribute\|="value"]|Attribute Contains Prefix|div[lang\|="en"]|Selects div elements with lang attribute starting with "en-" or matching "en".
 a , b|Comma Combiner|div,.intro|Selects all div and all with class="intro"
 \*|Universal|div \*|Selects all elements inside all div
 a + b|Adjacent Sibling|p+div|Selects div elements that immediately follow p elements
